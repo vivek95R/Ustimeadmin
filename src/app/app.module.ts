@@ -14,6 +14,8 @@ import {SharedServiceService} from '../SharedService/shared-service.service';
 import { AgGridModule } from 'ag-grid-angular';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { MerchantComponent } from './merchant/merchant.component';
+import { GridButtonComponent } from './grid-button/grid-button.component';
+
 const customNotifierOptions: NotifierOptions = { 
   position: {
     horizontal: {
@@ -59,7 +61,8 @@ const customNotifierOptions: NotifierOptions = {
     SideBarComponent,
     IndexComponent,
     TopBarComponent,
-    MerchantComponent
+    MerchantComponent,
+    GridButtonComponent    
   ],
   imports: [
     BrowserModule,
@@ -70,6 +73,8 @@ const customNotifierOptions: NotifierOptions = {
     NotifierModule.withConfig(customNotifierOptions),
     AgGridModule.withComponents([])
 
+  ],entryComponents:[
+    GridButtonComponent
   ],
   providers: [SharedServiceService],
   bootstrap: [AppComponent]

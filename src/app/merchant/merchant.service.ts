@@ -14,6 +14,10 @@ import { MerchantData } from './../Model/MerchantData';
 
     rowData = [
         { serialno: '1', name: 'KFC', location: 'Melbourne', subscription: 'paid', partnersince: 'MAR2019'},
+        { serialno: '2', name: 'McDonald', location: 'Sydney', subscription: 'paid', partnersince: 'APR2019'},
+        { serialno: '2', name: 'McDonald', location: 'Sydney', subscription: 'paid', partnersince: 'APR2019'},
+        { serialno: '2', name: 'McDonald', location: 'Sydney', subscription: 'paid', partnersince: 'APR2019'},
+        { serialno: '2', name: 'McDonald', location: 'Sydney', subscription: 'paid', partnersince: 'APR2019'},
         { serialno: '2', name: 'McDonald', location: 'Sydney', subscription: 'paid', partnersince: 'APR2019'}
     ];
     getMerchantRowData(): Observable<MerchantData[]> {
