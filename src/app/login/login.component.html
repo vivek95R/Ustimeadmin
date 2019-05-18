@@ -1,0 +1,65 @@
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <!-- Mirrored from coderthemes.com/moltran/blue/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jan 2019 04:01:32 GMT -->
+
+    <head>
+        <meta charset="utf-8" />
+        <title>UsTime</title>
+        <link rel="shortcut icon" href="./images/avatar.jpg">
+        
+        <!-- <script src="../../Public/js/modernizr.min.js"></script>     -->
+    </head>
+    <body style="background: #f5f5f5">
+
+        <notifier-container></notifier-container>
+        <div class="wrapper-page">
+            <div class="card card-pages">
+                <div class="card-header " style="background-color: purple">
+                    <div></div>
+                    <div class="text-center">
+                        <img src="../../assets/images/applogo.png" alt="user-img" />
+                        <h1 style="color: white"> UsTime </h1>
+                    </div>
+                </div>
+                <div class="topbar-left">
+                </div>
+                <div class="card-body">
+                    <form class="form-horizontal m-t-20" name="login" [formGroup]="loginform" action="" method="POST">
+                        <div class="form-group">
+                            <div class="col-12">
+                                <input class="form-control input-lg" name="User" id="User" [(ngModel)]="user.User"
+                                    formControlName="User" [ngClass]="{ 'is-invalid': submitted && f.User.errors }"
+                                    placeholder="Username">
+                                <div *ngIf="submitted && f.User.errors" class="invalid-feedback">
+                                    <div *ngIf="f.User.errors.required">User name is required</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-12">
+                                <input class="form-control input-lg" name="pwd" id="password"
+                                    [(ngModel)]="user.Password" formControlName="pwd" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f.pwd.errors }" type="password"
+                                    placeholder="Password">
+                                <div *ngIf="submitted && f.pwd.errors" class="invalid-feedback">
+                                    <div *ngIf="f.pwd.errors.required">Password is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group text-center m-t-40">
+                            <div class="col-12">
+
+                                <button type="submit" class="btn btn-primary btn-lg w-lg waves-effect waves-light"
+                                    (click)="Login()">Log In</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+</body>
