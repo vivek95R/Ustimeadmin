@@ -40,10 +40,53 @@
     </button>
   </div>
   <div class="modal-body">
-    
-     
-        <label for="Name"></label>
-        <input type="text" name="" [(ngModel)]="merchantDetails" id=""/>
+    <form class="form-horizontal m-t-20" name="login" [formGroup]="viewMerchantform" action="" method="POST">
+        <div class="form-group">
+          <div class="row">
+              <div class="col-4">
+                <label class="control-label" for="Name">Name</label>
+                </div>
+                <div class="col-8">
+              <input class="form-control input-lg" name="Name" id="Name"
+              formControlName="Name">
+              </div>
+          </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-4">
+                  <label class="control-label" for="Location">Location</label>
+                  </div>
+                  <div class="col-8">
+                <input class="form-control input-lg" name="Location" id="Location"
+                formControlName="Location">
+                </div>
+            </div>
+          </div>
+          <div class="form-group">
+              <div class="row">
+                  <div class="col-4">
+                    <label class="control-label" for="Subscription">Subscription</label>
+                    </div>
+                    <div class="col-8">
+                  <input class="form-control input-lg" name="Subscription" id="Subscription"
+                  formControlName="Subscription">
+                  </div>
+              </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                      <label class="control-label" for="PartnerSince">PartnerSince</label>
+                      </div>
+                      <div class="col-8">
+                    <input class="form-control input-lg" name="PartnerSince" id="PartnerSince"
+                    formControlName="PartnerSince">
+                    </div>
+                </div>
+              </div>
+    </form>
+        
         
      
     
