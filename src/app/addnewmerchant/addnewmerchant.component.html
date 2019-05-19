@@ -1,0 +1,329 @@
+<div class="card">
+  <div class="card-header"> 
+      <h3 class="card-title">Your Store Details</h3> 
+  </div> 
+  <div class="card-body"> 
+      <form id="branchform" action="/updatebranch" method="POST">
+          <div>
+              <h3>Basic Information</h3>
+              <section>
+          <div class="form-group row">
+              <div class="col-sm-6">
+                     <input type="text" name="name" class="form-control" id="field-2" placeholder="Merchant Name" autocomplete="off">
+              </div>
+              <div class="col-sm-6">
+                   <input type="text" class="form-control" name ="logo" id="field-2" placeholder="Logo Name" autocomplete="off">
+              </div>
+          </div>
+          <div class="form-group row">
+              <div class="col-sm-6">
+                     <input type="text" class="form-control" id="field-2" name="mobile" placeholder="Mobile" autocomplete="off">
+              </div>
+              <div class="col-sm-6">
+                     <input type="text" class="form-control" id="field-2" name="telephone" placeholder="LandLine" autocomplete="off">
+              </div>
+          </div>
+          <div class="form-group row">
+              <div class="col-sm-6">
+                     <input type="text" class="form-control" id="field-2" placeholder="Email Id" name="email" autocomplete="off">
+              </div>
+              
+          </div>
+              </section>
+              <h3>Contact Details</h3>
+              <section>
+                  <div class="form-group row">
+              <div class="col-sm-12">
+               <textarea class="form-control" rows="2" id="example-textarea-input" placeholder="Address" name="address" ></textarea>
+              </div>
+          </div>
+           <div class="form-group row">
+              <div class="col-sm-6">
+                
+             <input type="text" class="form-control" id="field-2" placeholder="City" name="city">
+              </div>
+               <div class="col-sm-6">
+                
+                  <input type="text" class="form-control" id="field-2" placeholder="Zip Code" name="pincode">
+              </div>
+          </div>
+          <div class="form-group row">
+              <div class="col-sm-6">
+                
+             <input type="text" class="form-control" id="field-2" placeholder="State" name="state">
+              </div>
+               <div class="col-sm-6">
+                
+                  <input type="text" class="form-control" id="field-2" placeholder="Country" name="country">
+              </div>
+          </div>
+
+              </section>
+              <h3>Working Hours</h3>
+              <section>
+                  <div class="col-md-12" style="height: 240px;overflow: auto;">
+                  <div class="row">
+                          <div class="col-md-2 col-sm-2 col-xs-2" style="padding-top: 22px;">Sunday</div>
+                          <div class="col-md-2 col-sm-2 col-xs-2" style="padding-top: 22px;">
+                                <!--    <div class="switchery-demo">
+              <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2" data-size="small" />
+          </div> -->
+                          <label class="switch">
+                            <input name="Sunday" type="checkbox" >
+                            <span class="slider round"></span>
+                          </label>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <label>Start time</label>
+                              <div class="input-group m-b-15">
+                                  <input name="Sunday_start" id="timepicker1" type="text" class="form-control">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="md md-alarm"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <label>end time</label>
+                              <div class="input-group m-b-15">
+                                  <input name="Sunday_end" id="timepicker2" type="text" class="form-control">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="md md-alarm"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                  </div>
+
+                  <div class="row">
+                          <div class="col-md-2 col-sm-2 col-xs-2" style="padding-top: 22px;">Monday</div>
+                          <div class="col-md-2 col-sm-2 col-xs-2" style="padding-top: 22px;">
+                                <!--    <div class="switchery-demo">
+              <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2" data-size="small" />
+          </div> -->
+                          <label class="switch">
+                            <input name="Monday" type="checkbox" >
+                            <span class="slider round"></span>
+                          </label>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <label>Start time</label>
+                              <div class="input-group m-b-15">
+                                  <input name="Monday_start"id="timepicker3" type="text" class="form-control">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="md md-alarm"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <label>end time</label>
+                              <div class="input-group m-b-15">
+                                  <input name="Monday_end" id="timepicker4" type="text" class="form-control">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="md md-alarm"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                  </div>
+
+                  <div class="row">
+                          <div class="col-md-2 col-sm-2 col-xs-2" style="padding-top: 22px;">Tuesday</div>
+                          <div class="col-md-2 col-sm-2 col-xs-2" style="padding-top: 22px;">
+                                <!--    <div class="switchery-demo">
+              <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2" data-size="small" />
+          </div> -->
+                          <label class="switch">
+                            <input name="Tuesday" type="checkbox" >
+                            <span class="slider round"></span>
+                          </label>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <label>Start time</label>
+                              <div class="input-group m-b-15">
+                                  <input name="Tuesday_start" id="tiamepicker5" type="text" class="form-control">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="md md-alarm"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <label>end time</label>
+                              <div class="input-group m-b-15">
+                                  <input name="Tuesday_end" id="timepicker6" type="text" class="form-control">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="md md-alarm"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                  </div>
+
+                  <div class="row">
+                          <div class="col-md-2 col-sm-2 col-xs-2" style="padding-top: 22px;">Wednesday</div>
+                          <div class="col-md-2 col-sm-2 col-xs-2" style="padding-top: 22px;">
+                                <!--    <div class="switchery-demo">
+              <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2" data-size="small" />
+          </div> -->
+                          <label class="switch">
+                            <input name="Wednesday" type="checkbox" >
+                            <span class="slider round"></span>
+                          </label>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <label>Start time</label>
+                              <div class="input-group m-b-15">
+                                  <input name="Wednesday_start" id="timepicker7" type="text" class="form-control">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="md md-alarm"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <label>end time</label>
+                              <div class="input-group m-b-15">
+                                  <input name="Wednesday_end" id="timepicker8" type="text" class="form-control">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="md md-alarm"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                  </div>
+
+                  <div class="row">
+                          <div class="col-md-2 col-sm-2 col-xs-2" style="padding-top: 22px;">thursday</div>
+                          <div class="col-md-2 col-sm-2 col-xs-2" style="padding-top: 22px;">
+                                <!--    <div class="switchery-demo">
+              <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2" data-size="small" />
+          </div> -->
+                          <label class="switch">
+                            <input name="Thursday" type="checkbox" >
+                            <span class="slider round"></span>
+                          </label>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <label>Start time</label>
+                              <div class="input-group m-b-15">
+                                  <input name="Thursday_start" id="timepicker9" type="text" class="form-control">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="md md-alarm"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <label>end time</label>
+                              <div class="input-group m-b-15">
+                                  <input name="Thursday_end" id="timepicker10" type="text" class="form-control">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="md md-alarm"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                  </div>
+
+                  <div class="row">
+                          <div class="col-md-2 col-sm-2 col-xs-2" style="padding-top: 22px;">Friday</div>
+                          <div class="col-md-2 col-sm-2 col-xs-2" style="padding-top: 22px;">
+                                <!--    <div class="switchery-demo">
+              <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2" data-size="small" />
+          </div> -->
+                          <label class="switch">
+                            <input name="Friday" type="checkbox" >
+                            <span class="slider round"></span>
+                          </label>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <label>Start time</label>
+                              <div class="input-group m-b-15">
+                                  <input name="Friday_start" id="timepicker11" type="text" class="form-control">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="md md-alarm"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <label>end time</label>
+                              <div class="input-group m-b-15">
+                                  <input name="Friday_end" id="timepicker12" type="text" class="form-control">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="md md-alarm"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                  </div>
+
+                  <div class="row">
+                          <div class="col-md-2 col-sm-2 col-xs-2" style="padding-top: 22px;">saturday</div>
+                          <div class="col-md-2 col-sm-2 col-xs-2" style="padding-top: 22px;">
+                                <!--    <div class="switchery-demo">
+              <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2" data-size="small" />
+          </div> -->
+                          <label class="switch">
+                            <input name="Saturday" type="checkbox" >
+                            <span class="slider round"></span>
+                          </label>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <label>Start time</label>
+                              <div class="input-group m-b-15">
+                                  <input name="Saturday_start" id="timepicker13" type="text" class="form-control">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="md md-alarm"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <label>end time</label>
+                              <div class="input-group m-b-15">
+                                  <input name="Saturday_end" id="timepicker14" type="text" class="form-control">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="md md-alarm"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                  </div>
+              </div>
+              </section>
+              <h3>About Your Business</h3>
+              <section>
+              <div class="form-group row">
+          
+              <div class="col-sm-6">
+                     <input type="text" class="form-control" name="fabcebook" id="field-2" placeholder="Facebook Link" autocomplete="off">
+              </div>
+
+              <div class="col-sm-6">
+                   <input type="text" class="form-control" name="Twitter" id="field-2" placeholder="Twitter Link" autocomplete="off"> </div>
+
+              </div>
+
+              <div class="form-group row">
+          
+              <div class="col-sm-12">
+                     <input type="text" class="form-control" name="instaprofile" id="field-2" placeholder="Instagram Link" autocomplete="off">
+              </div>
+
+              </div>
+
+              <div class="form-group row">
+          
+              <div class="col-sm-6">
+                     <input type="text"  class="form-control" name="catogory" id="field-2" placeholder="Business Catagory" autocomplete="off">
+              </div>
+
+              <div class="col-sm-6">
+                   <input type="text" class="form-control"  name="subcatagory" id="field-2" placeholder="Business SubCatagory " autocomplete="off"> </div>
+
+              </div>
+
+              <div class="form-group row">
+          
+              <div class="col-sm-12">
+                     <input type="text"  class="form-control" name="hashtag" id="field-2" placeholder="HashTag" autocomplete="off">
+              </div>
+
+              </div>
+
+                  
+              </section>
+          </div>
+      </form> 
+  </div>  <!-- End card-body -->
+</div> <!-- End card -->
+

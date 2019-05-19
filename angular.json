@@ -32,7 +32,14 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/Public/js/modernizr.min.js",
+              "src/Script.js",
+              "src/Public/plugins/timepicker/bootstrap-timepicker.min.js",
+              "src/Public/plugins/jquery-steps/jquery.steps.min.js",
+              "src/Public/plugins/jquery-validation/dist/jquery.validate.min.js",
+              "src/Public/plugins/bootstrapvalidator/dist/js/bootstrapValidator.js"
+              
             ],
             "es5BrowserSupport": true
           },

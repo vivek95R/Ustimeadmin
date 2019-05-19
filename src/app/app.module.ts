@@ -15,7 +15,9 @@ import { AgGridModule } from 'ag-grid-angular';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { MerchantComponent } from './merchant/merchant.component';
 import { GridButtonComponent } from './grid-button/grid-button.component';
-
+import { RegistrationComponent } from './registration/registration.component';
+import { AddnewmerchantComponent } from './addnewmerchant/addnewmerchant.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 const customNotifierOptions: NotifierOptions = { 
   position: {
     horizontal: {
@@ -62,7 +64,9 @@ const customNotifierOptions: NotifierOptions = {
     IndexComponent,
     TopBarComponent,
     MerchantComponent,
-    GridButtonComponent    
+    GridButtonComponent,
+    RegistrationComponent,
+    AddnewmerchantComponent    
   ],
   imports: [
     BrowserModule,
@@ -71,13 +75,17 @@ const customNotifierOptions: NotifierOptions = {
     HttpClientModule,
     ReactiveFormsModule,
     NotifierModule.withConfig(customNotifierOptions),
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([GridButtonComponent]),
+    NgbModule
 
-  ],entryComponents:[
-    GridButtonComponent
-  ],
+  ]
+  // ,entryComponents:[
+  //   GridButtonComponent
+  // ]
+  ,
   providers: [SharedServiceService],
   bootstrap: [AppComponent]
 })
+
 
 export class AppModule { }
