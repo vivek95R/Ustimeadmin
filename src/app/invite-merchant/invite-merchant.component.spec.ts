@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GridbittoneditorComponent } from './gridbittoneditor.component';
+import { InviteMerchantComponent } from './invite-merchant.component';
 
-describe('GridbittoneditorComponent', () => {
-  let component: GridbittoneditorComponent;
-  let fixture: ComponentFixture<GridbittoneditorComponent>;
+describe('InviteMerchantComponent', () => {
+  let component: InviteMerchantComponent;
+  let fixture: ComponentFixture<InviteMerchantComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GridbittoneditorComponent ]
+      declarations: [ InviteMerchantComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GridbittoneditorComponent);
+    fixture = TestBed.createComponent(InviteMerchantComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -10,15 +10,16 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { IndexComponent } from './index/index.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotifierModule, NotifierOptions } from 'angular-notifier';
-import {SharedServiceService} from '../SharedService/shared-service.service';
+import { SharedServiceService } from '../SharedService/shared-service.service';
 import { AgGridModule } from 'ag-grid-angular';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { MerchantComponent } from './merchant/merchant.component';
 import { GridButtonComponent } from './grid-button/grid-button.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AddnewmerchantComponent } from './addnewmerchant/addnewmerchant.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-const customNotifierOptions: NotifierOptions = { 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { InviteMerchantComponent } from './invite-merchant/invite-merchant.component';
+const customNotifierOptions: NotifierOptions = {
   position: {
     horizontal: {
       position: 'left',
@@ -43,7 +44,7 @@ const customNotifierOptions: NotifierOptions = {
       easing: 'ease'
     },
     hide: {
-      preset: 'fade', 
+      preset: 'fade',
       speed: 300,
       easing: 'ease',
       offset: 50
@@ -66,7 +67,8 @@ const customNotifierOptions: NotifierOptions = {
     MerchantComponent,
     GridButtonComponent,
     RegistrationComponent,
-    AddnewmerchantComponent    
+    AddnewmerchantComponent,
+    InviteMerchantComponent
   ],
   imports: [
     BrowserModule,

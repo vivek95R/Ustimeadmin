@@ -5,6 +5,7 @@ import { DashBoardComponent } from './dash-board/dash-board.component';
 import { IndexComponent } from './index/index.component';
 import { MerchantComponent } from './merchant/merchant.component'
 import { AddnewmerchantComponent } from './addnewmerchant/addnewmerchant.component';
+import { InviteMerchantComponent } from './invite-merchant/invite-merchant.component'
 const routes: Routes = [
   { path: '', component: LoginComponent },
   
@@ -13,7 +14,8 @@ const routes: Routes = [
     children: [
       { path: '', component: DashBoardComponent },
       { path: 'merchants', component: MerchantComponent },
-      { path: 'addnewmerchant', component: AddnewmerchantComponent }
+      { path: 'addnewmerchant', component: AddnewmerchantComponent },
+      { path: 'invitemerchant', component: InviteMerchantComponent }
     ]
   }];
 

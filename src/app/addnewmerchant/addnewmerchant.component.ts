@@ -1,4 +1,4 @@
-import { Component, OnInit ,ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import * as $ from 'jquery';
 @Component({
   selector: 'app-addnewmerchant',
@@ -8,9 +8,9 @@ import * as $ from 'jquery';
 })
 export class AddnewmerchantComponent implements OnInit {
   @ViewChild('ngbTabset') t: any;
-  thirdtab:boolean = true;
-  enable(){
-    this.thirdtab =false;
+  thirdtab: boolean = true;
+  enable() {
+    this.thirdtab = false;
     this.t.select('tab-selectbyid2')
   }
   constructor() { }
