@@ -19,6 +19,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { AddnewmerchantComponent } from './addnewmerchant/addnewmerchant.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InviteMerchantComponent } from './invite-merchant/invite-merchant.component';
+import { InviteNewMerchantComponentComponent } from './invite-new-merchant-component/invite-new-merchant-component.component';
 const customNotifierOptions: NotifierOptions = {
   position: {
     horizontal: {
@@ -68,7 +69,8 @@ const customNotifierOptions: NotifierOptions = {
     GridButtonComponent,
     RegistrationComponent,
     AddnewmerchantComponent,
-    InviteMerchantComponent
+    InviteMerchantComponent,
+    InviteNewMerchantComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +79,7 @@ const customNotifierOptions: NotifierOptions = {
     HttpClientModule,
     ReactiveFormsModule,
     NotifierModule.withConfig(customNotifierOptions),
-    AgGridModule.withComponents([GridButtonComponent]),
+    AgGridModule.withComponents([GridButtonComponent,InviteNewMerchantComponentComponent]),
     NgbModule
 
   ]

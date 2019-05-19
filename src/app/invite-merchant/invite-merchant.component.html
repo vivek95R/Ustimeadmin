@@ -2,8 +2,14 @@
   <div class="col-md-12">
     <div class="card">
       <div class="card-header">
-        <h4 class="pull-left page-title">Manage Merchants</h4>
+        <h4 class="pull-left page-title">Invite Merchants</h4>
+
       </div>
+      <div class="card-body">
+                                    
+
+        <button type="button" (click)="methodFromParent(InviteMerchantData)" class="btn btn-primary waves-effect waves-light"  data-target="#con-close-modal" style="float: right;">Invite Merchant</button>
+   </div>
     </div>
   </div>
 </div>
@@ -34,21 +40,42 @@
 
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">View Merchant</h4>
+    <h4 class="modal-title" id="modal-basic-title">Invite Merchant</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    
-     
-        <label for="Name"></label>
-        <input type="text" name="" [(ngModel)]="merchantDetails" id=""/>
-        
-     
-    
+        <div class="row"> 
+              <input type="hidden" [(ngModel)]="Addinvite.InviteId"/>                                          
+          <div class="col-md-12"> 
+              <div class="form-group"> 
+                 
+                  <input type="text" [(ngModel)]="Addinvite.name"  class="form-control" id="name" placeholder="Merchant Name"> 
+              </div> 
+          </div> 
+      </div> 
+      <div class="row"> 
+      
+        <div class="col-md-12"> 
+            <div class="form-group"> 
+               
+                <input type="number" [(ngModel)]="Addinvite.phone"  class="form-control" id="phone" placeholder="Merchant Phone"> 
+            </div> 
+        </div> 
+    </div>
+       <div class="row"> 
+      
+          <div class="col-md-12"> 
+              <div class="form-group"> 
+                  <input type="email" [(ngModel)]="Addinvite.email" class="form-control" id="email" placeholder="Merchant Email"> 
+              </div> 
+          </div> 
+      </div> 
+      
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+    <button  type="button" class="btn btn-secondary waves-effect" (click)="CloseinviteMerchant()" data-dismiss="modal">Close</button> 
+    <button id="invite" type="button" (click)="SendInvite(Addinvite)" class="btn btn-info waves-effect waves-light">Send Invite</button> 
   </div>
 </ng-template>
