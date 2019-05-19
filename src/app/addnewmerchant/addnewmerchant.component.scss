@@ -1,0 +1,13 @@
+.nav > li > a {
+    
+    line-height: 50px;
+    padding: 0px 15px;
+    position: relative;
+    background: lightgrey !important;
+    margin: 10px;
+    border-radius: 0px!important;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff !important;
+  background-color: #8a2be2!important;
+}
