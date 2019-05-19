@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MerchantService } from './merchant.service';
 import { GridButtonComponent } from '../grid-button/grid-button.component';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { FormBuilder } from '@angular/forms';
+
 @Component({
   selector: 'app-merchant',
   templateUrl: './merchant.component.html',
@@ -13,10 +15,13 @@ export class MerchantComponent {
   private gridColumnApi;
   private frameworkComponents;
   private context;
+  viewMerchantform : any;
+
   closeResult: string;
   merchantDetails: string;
   constructor(private merchantService: MerchantService,
-    private modalService: NgbModal) {
+    private modalService: NgbModal,
+    private formBuilder: FormBuilder) {
     this.frameworkComponents = {
       GridButtonComponent: GridButtonComponent
     };
@@ -29,8 +34,15 @@ export class MerchantComponent {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
   }
-  methodFromParent(paramns) {
-    this.merchantDetails = 'vivek'
+  methodFromParent(params) {
+
+    this.viewMerchantform = this.formBuilder.group({
+      Name : [params.name],
+      Location: [params.location],
+      Subscription: [params.subscription],
+      PartnerSince: [params.partnersince]
+    })
+    
     this.modalService.open(this.content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
